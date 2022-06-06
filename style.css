@@ -1,0 +1,770 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&display=swap');
+
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+
+* {
+	
+  cursor: none;
+}
+#myiframe{
+	min-width:100%;
+	min-height:100vh;
+	z-index:45;
+	
+	
+}
+
+
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+a:hover,
+a:active {
+  color: black;
+}
+.divone {
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  min-height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  z-index:5;
+  
+}
+
+h1 {
+  font-size: 1.75em;
+  font-family: "neuzeit-grotesk", Helvetica, sans-serif;
+  letter-spacing: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5em;
+  z-index: 5;
+}
+
+.cursor {
+  position: absolute;
+  width: 50px;
+  height: 45px;
+  z-index: 4;
+}
+.cursor:before,
+.cursor:after {
+  position: absolute;
+  content: "";
+  left: 25px;
+  top: 0;
+  width: 25px;
+  height: 40px;
+  background: white;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.cursor:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.cursor:nth-child(2):before,
+.cursor:nth-child(2):after {
+  background: red;
+}
+
+.line-1 {
+  position: relative;
+  color: white;
+  top: 50%;
+  width: 52em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(45) 1s 1 normal both,
+    blinkTextCursor 500ms steps(45) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 52em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* divtwo */
+
+
+.divtwo {
+  background: black;
+  font-family: 'Pacifico', cursive;
+  overflow:none;
+  position:relative;
+  height: 100vh;
+  color: black;
+ 
+
+  
+}
+.bgoverlay{
+  background: rgb(103,58,183);
+  background: rgba(103,58,183,0.7);
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+
+}
+.container{
+  position: relative;
+  margin: 300px auto 0 auto;
+  width: 320px;
+
+  
+}
+
+
+.ico{
+  display: block;
+  width: 320px;
+  height: 320px;
+}
+.open .ico{
+  animation: open 4s;
+  transform: scale(10);
+}
+.ico .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -95px;
+  margin-top: -73px;
+  z-index: 5;
+  font-size: 60px;
+  font-family: 'Love Light', cursive;
+  color: #fff;
+  
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.ico .title:hover{
+	color:black;
+}
+.open .ico .title{
+  opacity: 0;
+  transition: all 0.3s ease;
+  top:-100px;
+}
+.ico:before,
+.ico:after,
+.ico2:before,
+.ico2:after{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.ico:before,
+.ico:after,
+.ico2:before,
+.ico2:after{
+  display: block;
+  font-size: 20em;
+  color: #ff4081;
+  content: "\f004";
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico2:before,
+.ico2:after{
+  color: #e91e63;
+}
+.ico:before{
+  z-index: 3;
+}
+.ico:after{
+  animation: explode 4s infinite;
+}
+
+
+.ico2:before{
+  animation: explodeSmall 3s infinite;
+}
+.ico2:after{
+  animation: explodeSmall 2s infinite;
+}
+
+
+.endtext{
+  opacity:0;
+  position: absolute;
+  top:-100px;
+  width:100%;
+  
+}
+.open .endtext{
+  top:0;
+  opacity: 1;
+  animation: show 5s;
+}
+.endtext .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index:5;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.endtext h1,
+.endtext h2,
+.endtext h3{
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  text-align: center;
+  font-weight: normal;
+}
+.endtext h1{
+  font-size: 50px;
+}
+.endtext h2{
+  font-size: 30px;
+}
+.endtext h3{
+  font-size: 20px;
+}
+
+
+@keyframes explode {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+}
+@keyframes explodeSmall {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+}
+
+
+@keyframes open {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(10);
+    }
+}
+
+@keyframes show {
+    from {
+      opacity: 0;
+      top: -100px;
+    }
+    to {
+      opacity: 1;
+      top:0;
+    }
+}
+ 
+/*   Div Three   */
+
+
+.divthree {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position:relative;
+}
+
+.blue-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: linear-gradient(
+    to bottom,
+    rgba(42, 60, 102, 0) 0%,
+    rgba(42, 60, 102, 0.65) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+}
+
+.wrapper {
+  width: 800px;
+  position: relative;
+  height: 100vh;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+.lovebot {
+  position: absolute;
+  bottom: 120px;
+  right: 130px;
+  transition: 2s all;
+}
+.love-right {
+  right: -90px;
+}
+.buildings {
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  height: 250px;
+}
+.cn-tower {
+  position: absolute;
+  left: 25%;
+  bottom: -5px;
+  transition: 1s all;
+}
+.cn-tower-left {
+  position: absolute;
+  left: -30px;
+}
+.cn-tower svg:nth-child(2) {
+  position: absolute;
+  top: 75px;
+  left: 50px;
+}
+.cn-tower svg:nth-child(2):hover {
+  cursor: pointer;
+}
+.cn-tower svg:nth-child(2) circle,
+.cn-tower svg:nth-child(2) path {
+  fill: #f5f5f5;
+}
+.cn-tower svg:nth-child(2) line {
+  stroke: #b72e73;
+}
+.speech-bubble {
+  opacity: 0;
+  position: absolute;
+  top: 100px;
+  left: 110px;
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+  background: #fff;
+  transition: 1s all;
+  -webkit-animation-name: hvr-bob;
+  animation-name: hvr-bob;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index:999;
+}
+.speech-bubble:hover {
+  cursor: pointer;
+}
+.loveyou {
+  opacity: 0;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 250px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: navy;
+
+}
+.loveyou-more {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  
+}
+.small-tri {
+  opacity: 1;
+  position: absolute;
+  left: -8px;
+  top: 22px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 12px 6px 0;
+  border-color: transparent #fff transparent transparent;
+  transform: rotate(330deg);
+  transition: 1s all;
+}
+.small-tri-off {
+  opacity: 0;
+}
+.big-tri {
+  opacity: 0;
+  position: absolute;
+  left: -8px;
+  bottom: -200px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 24px 12px 0;
+  border-color: transparent #fff transparent transparent;
+  transform: rotate(330deg);
+  /* transition: 1s all; */
+}
+.big-tri-on {
+  opacity: 1;
+  left: -16px;
+  bottom: 80px;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transform: rotate(120deg);
+}
+.clouds-01 {
+  position: absolute;
+  bottom: 80px;
+  left: 300px;
+  -webkit-animation-name: hvr-bob;
+  animation-name: hvr-bob;
+  -webkit-animation-duration: 2.75s;
+  animation-duration: 2.75s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.clouds-02 {
+  position: absolute;
+  bottom: 30px;
+  left: -50px;
+  -webkit-animation-name: hvr-bob;
+  animation-name: hvr-bob;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+  -webkit-animation-duration: 2.75s;
+  animation-duration: 2.75s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.big-bubble {
+  transition: 3s all;
+  position: absolute;
+  top: -400px;
+  left: 110px;
+  width: 600px;
+  height: 600px;
+  border-radius: 15px;
+  background: #fff;
+}
+
+/* KEYFRAMES */
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+
+@-webkit-keyframes bounceInRight {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInRight {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* TWINKLING STARS ANIMATION FROM  https://codepen.io/WebSonick/pen/vjmgu/*/
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-webkit-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-moz-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+@-ms-keyframes move-clouds-back {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #000
+    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+    center;
+  z-index: 0;
+}
+
+.twinkling {
+  background: transparent
+    url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat
+    top center;
+  z-index: 1;
+
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
+}
+
+
+
+
+.change_content:after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  color: white;
+  z-index:220;
+}
+
+@keyframes changetext {
+  0% {
+   content: "Darjeeling";
+  }
+  20% {
+    content: "Agra";
+  }
+  35% {
+    content: "Jaipur";
+  }
+  50% {
+    content: "kerala";
+  }
+  70%{
+	content: "Kolkata";
+  }
+  80% {
+    content: "delhi";
+  }
+  100% {
+    content: "Mumbai";
+  }
+}
+
+/* divfour */
+
+
+
+/* Div Five*/
+
+
+
